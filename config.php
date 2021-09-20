@@ -42,7 +42,7 @@ define('FILES_DIR', DATA_DIR.DIRECTORY_SEPARATOR.'files');
 define('MAIL_CONFIGURATION', true);
 
 // E-mail address used for the "From" header (notifications)
-define('MAIL_FROM', 'replace-me@kanboard.local');
+define('MAIL_FROM', 'board@rugertek.com');
 
 // E-mail address used for the "Bcc" header to send a copy of all notifications
 define('MAIL_BCC', '');
@@ -67,22 +67,22 @@ define('MAIL_SENDMAIL_COMMAND', '/usr/sbin/sendmail -bs');
 define('DB_RUN_MIGRATIONS', true);
 
 // Database driver: sqlite, mysql or postgres (sqlite by default)
-define('DB_DRIVER', 'sqlite');
+define('DB_DRIVER', 'mysql');
 
 // Mysql/Postgres username
-define('DB_USERNAME', 'root');
+define('DB_USERNAME', 'rugertek');
 
 // Mysql/Postgres password
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'E23FrGTvJE7d9GHtfmPemsfqQCufqB');
 
 // Mysql/Postgres hostname
-define('DB_HOSTNAME', 'localhost');
+define('DB_HOSTNAME', 'rugerboard-db.mariadb.database.azure.com');
 
 // Mysql/Postgres database name
 define('DB_NAME', 'kanboard');
 
 // Mysql/Postgres custom port (null = default port)
-define('DB_PORT', null);
+define('DB_PORT', 3306);
 
 // Mysql SSL key
 define('DB_SSL_KEY', null);
