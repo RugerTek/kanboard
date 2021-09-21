@@ -27,7 +27,7 @@
         "ext-filter" : "*",
         "ext-session" : "*",
         "elvanto/picodb": "*",
-        "datto/json-rpc": "*",
+        "fguillot/json-rpc": "*",
         "christian-riesen/otp" : "1.4.3",
         "eluceo/ical": "0.16.1",
         "erusev/parsedown" : "^1.7",
