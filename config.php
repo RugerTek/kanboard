@@ -22,7 +22,7 @@ define('LOG_FILE', DATA_DIR.DIRECTORY_SEPARATOR.'debug.log');
 define('PLUGINS_DIR', __DIR__.DIRECTORY_SEPARATOR.'plugins');
 
 // Plugins directory URL
-define('PLUGIN_API_URL', 'https://kanboard.org/plugins.json');
+define('PLUGIN_API_URL', 'http://kanboard.org/plugins.json');
 
 // Enable/Disable plugin installer (Disabled by default for security reasons)
 // There is no code review or any approval process to submit a plugin.
