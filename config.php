@@ -10,10 +10,12 @@
 define('DATA_DIR', __DIR__.DIRECTORY_SEPARATOR.'data');
 
 // Enable/Disable debug
-define('DEBUG', false);
+//define('DEBUG', false);
+define('DEBUG', true);
 
 // Available log drivers: syslog, stderr, stdout, system or file
-define('LOG_DRIVER', 'system');
+//define('LOG_DRIVER', 'system');
+define('LOG_DRIVER', 'file');
 
 // Log filename if the log driver is "file"
 define('LOG_FILE', DATA_DIR.DIRECTORY_SEPARATOR.'debug.log');
