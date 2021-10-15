@@ -22,6 +22,7 @@ class Directory extends BaseCore
     public function getAvailablePlugins($url = PLUGIN_API_URL)
     {
         $plugins = $this->httpClient->getJson($url);
+        echo "<script>console.log(`getAvailablePlugins " . json_encode($plugins) . "`);</script>";
         $plugins = array_filter($plugins, array($this, 'isCompatible'));
         $plugins = array_filter($plugins, array($this, 'isInstallable'));
         return $plugins;

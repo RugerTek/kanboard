@@ -151,7 +151,8 @@ class Client extends Base
                 if (DEBUG) {
                     $this->logger->debug('HttpClient::doRequest: cURL detected');
                 }
-                $requestBody = $this->doRequestWithCurl($method, $url, $content, $headers, $raiseForErrors);
+                //$requestBody = $this->doRequestWithCurl($method, $url, $content, $headers, $raiseForErrors);
+                $requestBody = $this->doRequestWithSocket($method, $url, $content, $headers, $raiseForErrors);
             } else {
                 if (DEBUG) {
                     $this->logger->debug('HttpClient::doRequest: using socket');
