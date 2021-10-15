@@ -151,6 +151,13 @@ class Client extends Base
                 if (DEBUG) {
                     $this->logger->debug('HttpClient::doRequest: cURL detected');
                 }
+                /* ------   Modificacion manual     ------
+                Debido al bug de "Lista vacia de plugins"
+                Se deja de usar curl, y se pasa a usar 'socket' permanentemente
+                La manera permanente de aplicar esto es desinstalando php-curl "apt remove php7.3-curl"
+                Se puede verificar la desistalacion, en la consola de KB setting/About/Configuration -> HTTP Client: socket
+                https://docs.google.com/document/d/1hMoK0kK3DFMaM3PfozdVesiwMAvFF5SZ12i5yo-eS7U/edit#
+                */
                 //$requestBody = $this->doRequestWithCurl($method, $url, $content, $headers, $raiseForErrors);
                 $requestBody = $this->doRequestWithSocket($method, $url, $content, $headers, $raiseForErrors);
             } else {
