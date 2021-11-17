@@ -85,6 +85,8 @@ class SubtaskModel extends Base
                 UserModel::TABLE.'.name'
             )
             ->subquery($this->subtaskTimeTrackingModel->getTimerQuery($this->userSession->getId()), 'timer_start_date')
+            ->subquery($this->subtaskTimeTrackingModel->getStartQuery($this->userSession->getId()), 'start')
+            ->subquery($this->subtaskTimeTrackingModel->getEndQuery($this->userSession->getId()), 'end')
             ->join(UserModel::TABLE, 'id', 'user_id')
             ->asc(self::TABLE.'.position');
     }

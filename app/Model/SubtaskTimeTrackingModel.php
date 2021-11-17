@@ -41,6 +41,32 @@ class SubtaskTimeTrackingModel extends Base
         );
     }
 
+    public function getStartQuery($user_id)
+    {
+        return sprintf(
+            "SELECT %s FROM %s WHERE %s='%d' AND %s=%s LIMIT 1",
+            $this->db->escapeIdentifier('start'),
+            $this->db->escapeIdentifier(self::TABLE),
+            $this->db->escapeIdentifier('user_id'),
+            $user_id,
+            $this->db->escapeIdentifier('subtask_id'),
+            SubtaskModel::TABLE.'.id'
+        );
+    }
+
+    public function getEndQuery($user_id)
+    {
+        return sprintf(
+            "SELECT %s FROM %s WHERE %s='%d' AND %s=%s LIMIT 1",
+            $this->db->escapeIdentifier('end'),
+            $this->db->escapeIdentifier(self::TABLE),
+            $this->db->escapeIdentifier('user_id'),
+            $user_id,
+            $this->db->escapeIdentifier('subtask_id'),
+            SubtaskModel::TABLE.'.id'
+        );
+    }
+
     /**
      * Get query for user timesheet (pagination)
      *
